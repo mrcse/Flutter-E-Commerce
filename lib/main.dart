@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter E-Commerce App',
         theme: ThemeData.light(),
-        home: Home());
+        home: DetailScreen());
   }
 }

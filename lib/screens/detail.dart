@@ -45,7 +45,35 @@ class _DetailScreenState extends State<DetailScreen> {
                     child: IconButton(
                       icon: Icon(CupertinoIcons.heart),
                       onPressed: () => print('Like Button'),
-                    ))
+                    )),
+                Positioned(
+                  right: 16,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 100),
+                    width: 80,
+                    height: 280,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(22.0),
+                    ),
+                    child: ListView.builder(
+                        itemCount: 4,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            height: 70,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 4, vertical: 6),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(16.0),
+                              child: Image.network(
+                                imgSrc,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          );
+                        }),
+                  ),
+                ),
               ],
             )),
             ListTile(
